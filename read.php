@@ -15,6 +15,7 @@ include 'connect.php';
 
 <body>
     <div class="container my-5">
+    <button class="btn btn-primary"><a href="create.php" style="text-decoration:none" class="text-light">Create</a></button>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -23,7 +24,6 @@ include 'connect.php';
                     <th scope="col">Email</th>
                     <th scope="col">Mobile</th>
                     <th scope="col">Actions</th>
-
                 </tr>
             </thead>
             <tbody>
@@ -42,7 +42,8 @@ include 'connect.php';
                             <td>'.$name.'</td>
                             <td>'.$email.'</td>
                             <td>'.$mobile.'</td>
-                            <td> <button class="btn btn-primary"> <a href=""> update </a> </button> </td>
+                            <td> <button class="btn btn-primary"> <a style="text-decoration:none" class="text-light" href="update.php?updateid='.$id.'"> Update </a> </button>
+                            <button class="btn btn-danger"> <a style="text-decoration:none" class="text-light" href="delete.php?deleteid='.$id.'"> Delete </a> </button> </td>
                             </tr>';
                         }
                     }
